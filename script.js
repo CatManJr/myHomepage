@@ -1,18 +1,21 @@
-// Navigation functionality for sidebar tabs
+// Navigation functionality for both sidebar and top navigation
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation tabs and content sections
+    // Get all navigation tabs and links, and content sections
     const navTabs = document.querySelectorAll('.nav-tab');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const allNavElements = [...navTabs, ...navLinks];
     const contentSections = document.querySelectorAll('.content-section');
     
-    // Add click event listeners to navigation tabs
-    navTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+    // Add click event listeners to all navigation elements
+    allNavElements.forEach(nav => {
+        nav.addEventListener('click', function(e) {
+            e.preventDefault();
             const targetSection = this.getAttribute('data-section');
             
-            // Remove active class from all tabs
-            navTabs.forEach(t => t.classList.remove('active'));
+            // Remove active class from all navigation elements
+            allNavElements.forEach(n => n.classList.remove('active'));
             
-            // Add active class to clicked tab
+            // Add active class to clicked element
             this.classList.add('active');
             
             // Hide all content sections
@@ -20,12 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.classList.remove('active');
             });
             
-            // Show target section with animation
+            // Show target section without animation
             const targetElement = document.getElementById(targetSection);
             if (targetElement) {
-                setTimeout(() => {
-                    targetElement.classList.add('active');
-                }, 100);
+                targetElement.classList.add('active');
             }
         });
     });
@@ -44,78 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add hover effects for interactive elements
-    const interactiveElements = document.querySelectorAll('.academic-item, .research-item, .project-item, .experience-item, .award-item');
-    
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px)';
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // Enhanced contact link interactions
-    const contactLinks = document.querySelectorAll('.contact-link');
-    
-    contactLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'scale(1.1)';
-                icon.style.transition = 'transform 0.2s ease';
-            }
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'scale(1)';
-            }
-        });
-    });
-    
-    // Skill tag hover effects
-    const skillTags = document.querySelectorAll('.skill-tag, .tech-tag, .interest-tag');
-    
-    skillTags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'all 0.2s ease';
-        });
-        
-        tag.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
-    
-    // Add loading animation for content sections
-    function animateContentLoad() {
-        const contentBlocks = document.querySelectorAll('.content-block');
-        
-        contentBlocks.forEach((block, index) => {
-            block.style.opacity = '0';
-            block.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                block.style.transition = 'all 0.5s ease';
-                block.style.opacity = '1';
-                block.style.transform = 'translateY(0)';
-            }, index * 100);
-        });
-    }
-    
-    // Trigger content load animation when switching sections
-    navTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            setTimeout(animateContentLoad, 200);
-        });
-    });
-    
-    // Initial load animation
-    animateContentLoad();
+    // Remove all hover effects and animations
+    // No more interactive element animations
     
     // Responsive navigation for mobile
     function handleMobileNavigation() {
@@ -124,12 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (window.innerWidth <= 1024) {
             // Mobile behavior
-            sidebar.style.position = 'relative';
-            sidebar.style.height = 'auto';
+            if (sidebar) {
+                sidebar.style.position = 'relative';
+                sidebar.style.height = 'auto';
+            }
         } else {
             // Desktop behavior
-            sidebar.style.position = 'sticky';
-            sidebar.style.height = '100vh';
+            if (sidebar) {
+                sidebar.style.position = 'sticky';
+                sidebar.style.height = '100vh';
+            }
         }
     }
     
@@ -137,78 +72,33 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', handleMobileNavigation);
     handleMobileNavigation(); // Initial call
     
-    // Add click tracking for external links
-    const externalLinks = document.querySelectorAll('a[target="_blank"]');
+    // Remove all visual feedback and animations
+    // No more external link animations
     
-    externalLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Add visual feedback for external link clicks
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-        });
-    });
-    
-    // Enhanced university logo interactions
-    const universityLogos = document.querySelectorAll('.university-logo');
-    
-    universityLogos.forEach(logo => {
-        logo.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1) rotate(2deg)';
-            this.style.transition = 'all 0.3s ease';
-        });
-        
-        logo.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotate(0deg)';
-        });
-    });
-    
-    // Add parallax effect to sidebar (desktop only)
-    function addParallaxEffect() {
-        if (window.innerWidth > 1024) {
-            const sidebar = document.querySelector('.sidebar');
-            const mainContent = document.querySelector('.main-content');
+    // Handle direct URL navigation
+    function handleHashChange() {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            const targetLink = document.querySelector(`[data-section="${hash}"]`);
+            const targetSection = document.getElementById(hash);
             
-            mainContent.addEventListener('scroll', function() {
-                const scrollTop = this.scrollTop;
-                const parallaxOffset = scrollTop * 0.1;
+            if (targetLink && targetSection) {
+                // Remove active from all
+                allNavElements.forEach(nav => nav.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
                 
-                if (sidebar) {
-                    sidebar.style.transform = `translateY(${parallaxOffset}px)`;
-                }
-            });
+                // Activate target
+                targetLink.classList.add('active');
+                targetSection.classList.add('active');
+            }
         }
     }
     
-    addParallaxEffect();
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
     
-    // Add smooth transitions for all interactive elements
-    const allInteractiveElements = document.querySelectorAll('button, a, .nav-tab, .contact-link, .project-link');
+    // Handle initial page load
+    handleHashChange();
     
-    allInteractiveElements.forEach(element => {
-        element.style.transition = 'all 0.2s ease';
-    });
-    
-    // Add keyboard navigation support
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Tab') {
-            // Enhance tab navigation visibility
-            const focusedElement = document.activeElement;
-            if (focusedElement) {
-                focusedElement.style.outline = '2px solid var(--accent-color)';
-                focusedElement.style.outlineOffset = '2px';
-            }
-        }
-    });
-    
-    // Remove focus outline when clicking
-    document.addEventListener('click', function() {
-        const focusedElement = document.activeElement;
-        if (focusedElement) {
-            focusedElement.style.outline = 'none';
-        }
-    });
-    
-    console.log('Sidebar navigation and enhanced interactions initialized successfully!');
+    console.log('Basic navigation functionality initialized successfully!');
 });

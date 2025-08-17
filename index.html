@@ -6,449 +6,272 @@
     <title>Zhicheng Xu - MS-GIST Student & Researcher</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Navigation Bar -->
+    <header class="top-nav-header">
+        <div class="nav-container">
+            <nav class="main-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#research" class="nav-link" data-section="research">Research</a></li>
+                    <li><a href="#professional" class="nav-link" data-section="professional">Professional</a></li>
+                    <li><a href="#personal" class="nav-link" data-section="personal">Personal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Main Container -->
     <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- Personal Info Section -->
-            <div class="personal-info-card">
-                <div class="profile-header">
-                    <div class="university-logos">
-                        <img src="http://www.gatech.edu/modules/contrib/gt_tools/images/gt-logo.svg" title="Georgia Institute of Technology - Current">
-                        <img src="https://www.ecnu.edu.cn/images/logo.svg" title="East China Normal University - Alumni">
-                    </div>
-                    <div class="name-section">
+        <!-- Home Section -->
+        <section class="content-section home-section active" id="home">
+            <div class="home-header">
+                <div class="left-column">
+                    <div class="personal-info">
                         <h1 class="name">Zhicheng Xu</h1>
-                        <h2 class="title">MS-GIST Student & Researcher</h2>
-                        <p class="location">Atlanta, GA · USA</p>
+                        <p class="title">MS-GIST Student & Researcher</p>
+                        <p class="affiliation">Georgia Institute of Technology</p>
+                        <p class="location">Atlanta, GA, USA</p>
+                        <p class="history">Alumni of <a href="https://gis.ecnu.edu.cn/" target="_blank">Key Laboratory of GIS, Ministry of Education, ECNU</a></p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> zxu745@gatech.edu</p>
+                        <p><strong>Phone:</strong> +86-18758233003 or +1-(240)879-9941</p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/CatManJr" target="_blank">CatManJr</a></p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/zhicheng-xu-550223304/" target="_blank">Zhicheng Xu</a></p>
+                        <p><strong>Kaggle:</strong> <a href="https://kaggle.com/catmanjr" target="_blank">catmanjr</a></p>
+                        <p><strong>CV:</strong> <a href="CV/Zhicheng Xu_Resume.pdf" target="_blank">Download PDF</a></p>
                     </div>
                 </div>
-
-                <!-- Contact Links -->
-                <div class="contact-section">
-                    <h3>Contact</h3>
-                    <div class="contact-links">
-                        <a href="mailto:zxu745@gatech.edu" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>zxu745@gatech.edu</span>
-                        </a>
-                        <a href="tel:+8618758233003" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+86-18758233003</span>
-                        </a>
-                        <a href="https://github.com/CatManJr" class="contact-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/zhicheng-xu-550223304/" class="contact-link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://kaggle.com/catmanjr" class="contact-link" target="_blank">
-                            <i class="fab fa-kaggle"></i>
-                            <span>Kaggle</span>
-                        </a>
-                        <a href="CV/Zhicheng Xu_Resume.pdf" class="contact-link download-btn" target="_blank">
-                            <i class="fas fa-download"></i>
-                            <span>Download PDF</span>
-                        </a>
+                
+                <div class="right-column">
+                    <img src="photo/202506.jpg" alt="Zhicheng Xu" class="profile-photo">
+                    
+                    <div class="greeting-section">
+                        <div class="greeting-message">
+                            <span class="greeting-text">Nice to </span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg" alt="M" class="mcdonalds-logo">
+                            <span class="greeting-text">eet You!</span>
+                        </div>
+                        <div class="name-pronunciation">
+                            <p>Please call me Bruce or Katzemann</p>
+                            <p>if you feel difficult to pronounce my Chinese name.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </aside>
 
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Summary Section (Always Visible) -->
-            <section class="summary-section">
-                <div class="greeting-message">
-                    <span class="greeting-text">Nice to </span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg" alt="M" class="mcdonalds-logo">
-                    <span class="greeting-text">eet You！</span>
+            <div class="section-block">
+                <h2>About</h2>
+                <p>I am a graduate student in the MS-GIST program at Georgia Tech, with <strong>interests in the application of artificial intelligence and high-performance computing to spatial data science</strong>. My background, rooted in my work at Key Laboratory of GIS, Ministry of Education, East China Normal University, includes extensive research in remote sensing, computer vision, and spatial analysis, leading to a co-authored SCIE publication. I am also a passionate open-source contributor dedicated to advancing the field and sharing knowledge.</p>
+                
+                <p><strong>Actively seeking PhD/RA opportunities in GIS related area, as well as Machine Learning Engineer & GIS Engineer positions.</strong></p>
+            </div>
+
+            <div class="section-block">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Master of Science in Geographic Information Science and Technology (MS-GIST)</h3>
+                        <span class="date">Aug 2025 - Present</span>
+                    </div>
+                    <p class="institution">Georgia Institute of Technology, School of City and Regional Planning</p>
                 </div>
                 
-                <!-- Status Banner -->
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Bachelor of Science in Geographic Sciences | Minor in AI + Math</h3>
+                        <span class="date">Sept 2021 - Jun 2025</span>
+                    </div>
+                    <p class="institution">East China Normal University (ECNU), School of Geographic Sciences</p>
+            </div>
+        </section>
 
-                <p class="summary-text">
+        <!-- Research Section -->
+        <section class="content-section research-section" id="research">
+            <div class="section-block">
+                <h2>Publications</h2>
+                
+                <div class="publication-item">
+                    <p class="paper-title">"Optimizing the Spatial Accessibility of Outdoor Sports Facilities: A Greedy Heuristic Algorithm Based on Remote Sensing Images"</p>
+                    <p class="paper-authors">L. Liu, <strong>Z. Xu</strong>, S. Yao, M. Lv, and C. Liu</p>
+                    <p class="paper-venue">International Journal of Digital Earth, 2024, 17(1)</p>
+                    <p class="paper-doi">DOI: 10.1080/17538947.2024.2390427</p>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2>Most Recent Research Experience</h2>
+                
+                <div class="research-item">
+                    <div class="research-header">
+                        <h3>Bachelor's Thesis: A Research on the Construction of Lightweight Open Vocabulary Detector for Remote Sensing Images</h3>
+                        <span class="date">October 2024 – May 2025</span>
+                    </div>
+                    <p class="supervisor">Supervised by Prof. Jianping Wu, Key Laboratory of Geographic Information Science, Ministry of Education, ECNU</p>
+                    <ul class="details-list">
+                        <li>Introduced a light-weight solution for training open vocabulary detection models for remote sensing images using the xView dataset and a single RTX 4090 GPU</li>
+                        <li>Designed and implemented pretraining on xView, dataset transfer (zero-shot and fine-tuning) on DIOR, and task transfer fine-tuning on Potsdam dataset</li>
+                        <li>Explored and discussed the mechanism of the open vocabulary detection model with basic machine learning theory</li>
+                        <li>Technical report available on <a href="https://github.com/CatManJr/Train-an-OVD-within-21-dollars" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-header">
+                        <h3>Deep Learning-Based Recognition and Accessibility Analysis of Outdoor Stadiums in the Yangtze River Delta</h3>
+                        <span class="date">May 2024 – May 2025</span>
+                    </div>
+                    <p class="supervisor">Supervised by Dr. Shenjun Yao, Key Laboratory of Geographic Information Science, Ministry of Education, ECNU</p>
+                    <ul class="details-list">
+                        <li>Introduced a slicing-aided pipeline for efficiently selecting data to label with CLIP zero-shot interference</li>
+                        <li>Trained an appropriate model for sports facilities in ultra-high resolution aerial images based on YOLO11-obb</li>
+                        <li>Constructed the complete workflow of training new object detection model, using SAHI for fine-grained detection, and digitalize the box to AOI data</li>
+                        <li>Modified the Gaussian 2SFCA method to a 3-step approach including an extra supply level step (using z-score norm)</li>
+                        <li>Selected as a "Municipal-level undergraduate innovation project" by Shanghai City</li>
+                        <li>Code available on <a href="https://github.com/CatManJr/YOLO11-Sports-Facilities" target="_blank">GitHub</a> and <a href="https://www.kaggle.com/code/catmanjr/zero-shot-potential-labels-finding-by-clip" target="_blank">Kaggle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Section -->
+        <section class="content-section projects-section" id="professional">
+            <div class="section-block">
+                <h2>Selected Open Source Projects</h2>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>My Kernel Templates</h3>
+                        <span class="date">June 2025 - Ongoing</span>
+                    </div>
+                    <p class="project-tech">Technologies: CUDA, Triton, GPU Kernels</p>
+                    <p class="project-description">A continuous code repository to store the kernels I implemented in Triton or CUDA. The Flash-Attention sub-project provides a pure Triton kernel for the forward and backward passes of Flash Attention-2. The related tech blog has received over 8k reads, 341 likes, and 384 collects on Rednote.</p>
+                    <p class="project-link">Repository: <a href="https://github.com/CatManJr/my-kernel-templates" target="_blank">GitHub</a></p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>How to Teach Your Cat DDPM</h3>
+                        <span class="date">Oct 2024 - Dec 2024</span>
+                    </div>
+                    <p class="project-tech">Technologies: DDPM, Machine Learning Theory, LaTeX</p>
+                    <p class="project-description">An interest-led project that reproduced the proof of the DDPM model from "Understanding Diffusion Models: A Unified Perspective" (arXiv:2208.11970, 2022) and practiced mathematical writing with LaTeX.</p>
+                    <p class="project-link">Repository: <a href="https://github.com/CatManJr/How-to-Teach-Your-Cat-DDPM" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Teaching Assistant - Software Engineering and GIS Development</h3>
+                        <span class="date">Feb 2024 - Jul 2024</span>
+                    </div>
+                    <p class="institution">East China Normal University, Shanghai, China</p>
+                    <ul class="details-list">
+                        <li>Tutored in the 36-hour theory class, organized regular Q&A sessions, implemented extended learning about the GDAL library and debugging</li>
+                        <li>Instructed in the 18-hour lab class, assisting 75 students in setting up environments, completing assignments, and final projects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2>Technical Skills</h2>
+                
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <p>Python, C++, MATLAB, C#, LaTeX, HTML/CSS</p>
+                    </div>
                     
-                    I am a new graduate student in the MS-GIST program at Georgia Tech, 
-                    interested in the application of artificial intelligence and high-performance 
-                    computing to spatial data science. My background, rooted in my work at Key 
-                    Laboratory of GIS, Ministry of Education, East China Normal U,
-                    includes extensive research in remote sensing, computer vision, 
-                    and spatial analysis, leading to a co-authored SCIE publication. I am also a passionate 
-                    open-source contributor dedicated to advancing the field and sharing knowledge.
-                </p>
-
-                <div class="status-banner">
-                    <div class="status-highlight seeking">
-                        Open to <strong>ML/GIS Engineer </strong>
-                        or <strong>PhD/RA Opportunities</strong>
+                    <div class="skill-category">
+                        <h4>Frameworks & Tools</h4>
+                        <p>PyTorch, Hugging Face, Ultralytics, Triton, CUDA, FastAPI, Streamlit, Qt6</p>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Software & Specializations</h4>
+                        <p>ArcGIS, QGIS, Computer Vision, Large Language Models, Deep Learning, Remote Sensing</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-            </section>
-
-            <!-- Navigation Tabs as Divider -->
-            <nav class="main-nav divider-nav">
-                <div class="nav-tabs">
-                    <button class="nav-tab active" data-section="academic">
-                        <i class="fas fa-graduation-cap"></i>
-                        Academic
-                    </button>
-                    <button class="nav-tab" data-section="projects">
-                        <i class="fas fa-code"></i>
-                        Projects
-                    </button>
-                    <button class="nav-tab" data-section="interests">
-                        <i class="fas fa-heart"></i>
-                        Personal
-                    </button>
-                </div>
-            </nav>
-
-            <!-- Academic Section -->
-            <section class="content-section academic-section active" id="academic">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="fas fa-graduation-cap"></i>
-                        Education & Research
-                    </h2>
+        <!-- Personal Section -->
+        <section class="content-section personal-section" id="personal">
+            <div class="section-block">
+                <h2>Honors & Awards</h2>
+                
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>2024 ICM (Interdisciplinary Contest in Modeling)</h3>
+                        <span class="award-level">Honorable Mention (Problem D)</span>
+                    </div>
                 </div>
                 
-                <div class="content-grid">
-                    <!-- Education -->
-                    <div class="content-block">
-                        <h3>Education</h3>
-                        
-                        <div class="academic-item georgia-tech">
-                            <div class="academic-header">
-                                <div class="academic-title-with-logo">
-                                    <img src="http://www.gatech.edu/modules/contrib/gt_tools/images/gt-logo.svg" alt="Georgia Tech" class="inline-logo">
-                                    <h4>Master of Science in Geographic Information Science and Technology (MS-GIST)</h4>
-                                </div>
-                                <span class="date">Aug 2025 - Present</span>
-                            </div>
-                            <p class="institution">Georgia Institute of Technology · School of City and Regional Planning</p>
-                        </div>
-                        
-                        <div class="academic-item ecnu">
-                            <div class="academic-header">
-                                <div class="academic-title-with-logo">
-                                    <img src="https://www.ecnu.edu.cn/images/logo.svg" alt="ECNU" class="inline-logo">
-                                    <div class="academic-title-content">
-                                        <h4>Bachelor of Science in Geographic Sciences</h4>
-                                        <h5>Minor of AI + Math</h5>
-                                    </div>
-                                </div>
-                                <span class="date">Sept 2021 - Jun 2025</span>
-                            </div>
-                            <p class="institution">East China Normal University (ECNU) · School of Geographic Sciences</p>
-                            <p class="gpa">GPA: 3.53/4.0 | Average Score: 87/100</p>
-                            <div class="lab-affiliation-note">
-                                <span>Alumni of Key Laboratory of Geographic Information Science, Ministry of Education</span>
-                                <a href="https://gis.ecnu.edu.cn/" target="_blank" class="lab-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>2023 CUMCM</h3>
+                        <span class="award-level">Third Prize, Shanghai Region</span>
                     </div>
-
-                    <!-- Publications -->
-                    <div class="content-block">
-                        <h3>Publications</h3>
-                        <div class="publication-item">
-                            <p class="paper-title">"Optimizing the Spatial Accessibility of Outdoor Sports Facilities: A Greedy Heuristic Algorithm Based on Remote Sensing Images"</p>
-                            <p class="paper-authors">L. Liu, <strong>Z. Xu</strong>, S. Yao, M. Lv, and C. Liu</p>
-                            <p class="paper-venue">International Journal of Digital Earth, 2024, 17(1)</p>
-                            <p class="paper-doi">DOI: 10.1080/17538947.2024.2390427</p>
-                        </div>
-                    </div>
-
-                    <!-- Research Experience -->
-                    <div class="content-block">
-                        <h3>Research Experience</h3>
-                        
-                        <div class="research-item">
-                            <div class="research-header">
-                                <h4>Bachelor's Thesis: A Research on the Construction of Lightweight Open Vocabulary Detector for Remote Sensing Images</h4>
-                                <span class="date">October 2024 – May 2025</span>
-                            </div>
-                            <p class="supervisor">
-                                <i class="fas fa-flask"></i>
-                                Supervised by Prof. Jianping Wu, Key Laboratory of Geographic Information Science, Ministry of Education, ECNU
-                            </p>
-                            <ul class="research-achievements">
-                                <li>Introduced a light-weight solution for training open vocabulary detection models for remote sensing images using the xView dataset and a single RTX 4090 GPU</li>
-                                <li>Designed and implemented pretraining on xView, dataset transfer finetuning on DIOR, and task transfer finetuning on Potsdam experiments to test the performance of the proposed model</li>
-                                <li>Explore and discuss the mechanism of the open vocabulary detection model with the basic machine learning theory</li>
-                                <li>English technical report: <a href="https://github.com/CatManJr/Train-an-OVD-within-21-dollars" target="_blank">GitHub Repository</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="research-item">
-                            <div class="research-header">
-                                <h4>Deep Learning-Based Recognition and Accessibility Analysis of Outdoor Stadiums in the Yangtze River Delta</h4>
-                                <span class="date">May 2024 – May 2025</span>
-                            </div>
-                            <p class="supervisor">
-                                <i class="fas fa-flask"></i>
-                                Supervised by Dr. Shenjun Yao, Key Laboratory of Geographic Information Science, Ministry of Education, ECNU
-                            </p>
-                            <ul class="research-achievements">
-                                <li>Introduced a slicing-aided pipeline for efficiently selecting data to label with CLIP zero-shot interference</li>
-                                <li>Trained an appropriate model for sports facilities in ultra-high resolution aerial images based on YOLO11-obb; deployed SAHI (Slicing Aided Hyper Inference) to recognize outdoor sports facilities more precisely</li>
-                                <li>Modified the Gaussian 2SFCA method to a 3-step one (including an extra supply level step)</li>
-                                <li>Selected as a "Municipal-level undergraduate innovation project" by Shanghai City</li>
-                                <li>Code available: <a href="https://github.com/CatManJr/YOLO11-Sports-Facilities" target="_blank">GitHub</a> | <a href="https://www.kaggle.com/code/catmanjr/zero-shot-potential-labels-finding-by-clip" target="_blank">Kaggle</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section class="content-section projects-section" id="projects">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="fas fa-code"></i>
-                        Projects & Experience
-                    </h2>
                 </div>
                 
-                <div class="content-grid">
-                    <!-- Open Source Projects -->
-                    <div class="content-block">
-                        <h3>Selected Open Source Projects</h3>
-                        
-                        <div class="project-item">
-                            <div class="project-header">
-                                <h4>My Kernel Templates</h4>
-                                <div class="project-links">
-                                    <a href="https://github.com/CatManJr/my-kernel-templates" class="project-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-meta">
-                                <span class="date">June 2025 - Ongoing</span>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tech-tag">CUDA</span>
-                                <span class="tech-tag">Triton</span>
-                                <span class="tech-tag">GPU Kernels</span>
-                            </div>
-                            <p class="project-description">
-                                A continuous code repo to store the kernels I implemented in Triton or CUDA. It consists of several independent projects about GPU kernels.
-                                Flash-Attention sub-project, which was inspired by CS336 at Stanford, provides a pure Triton kernel for the forward and backward passes of Flash Attention-2. 
-                                The related tech blog has received over 8k reads, 341 likes, and 384 collects on Rednote, a Chinese social media.
-                            </p>
-                        </div>
-
-                        <div class="project-item">
-                            <div class="project-header">
-                                <h4>How to Teach Your Cat DDPM</h4>
-                                <div class="project-links">
-                                    <a href="https://github.com/CatManJr/How-to-Teach-Your-Cat-DDPM" class="project-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-meta">
-                                <span class="date">Oct 2024 - Dec 2024</span>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tech-tag">DDPM</span>
-                                <span class="tech-tag">Diffusion Models</span>
-                                <span class="tech-tag">LaTeX</span>
-                                <span class="tech-tag">Mathematical Writing</span>
-                            </div>
-                            <p class="project-description">
-                                An interest-led spare time project happened while taking the Digital Image Processing course.
-                                Reproduced the proof of the DDPM model in "Understanding Diffusion Models: A Unified Perspective," arXiv preprint arXiv:2208.11970, 2022; 
-                                practiced mathematical writing with LaTeX.
-                            </p>
-                        </div>
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>2023 Geographic Information Technology Competition</h3>
+                        <span class="award-level">Individual Third Prize</span>
                     </div>
-
-                    <!-- Professional Experience -->
-                    <div class="content-block">
-                        <h3>Professional Experience</h3>
-                        
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h4>Teaching Assistant - Software Engineering and GIS Development</h4>
-                                <span class="date">Feb 2024 - Jul 2024</span>
-                            </div>
-                            <p class="company">East China Normal University · Shanghai, China</p>
-                            <ul class="achievements">
-                                <li>Tutored in the 36-hour theory class, organized regular Q&A sessions after classes, implemented extended learning about the GDAL library, and about debugging</li>
-                                <li>Instructed in the 18-hour lab class, assisting 75 students in setting up the necessary environments, completing development assignments, and the final project</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h4>Participant, Field Practice of Comprehensive Geography</h4>
-                                <span class="date">Jul 2024</span>
-                            </div>
-                            <p class="company">China</p>
-                            <ul class="achievements">
-                                <li>Conducted a field investigation in the Huaihe River and studied the working principle of real-time weather forecasting based on the General Circulation Model (GCM) and the standard instruments used in meteorological observations</li>
-                                <li>Collaborated on a research proposal addressing the impact of wind power generation on intertidal vegetation growth conditions in the Silting Coastal Area of Northern Jiangsu Province, mainly responsible for the writing of the proposed research methodology</li>
-                                <li>Proposed an aerial image segmentation approach by introducing U-Net++, which was well-received in the presentation</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Technical Skills -->
-                    <div class="content-block">
-                        <h3>Technical Skills</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Programming</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">C++</span>
-                                    <span class="skill-tag">MATLAB</span>
-                                    <span class="skill-tag">C#</span>
-                                    <span class="skill-tag">LaTeX</span>
-                                    <span class="skill-tag">HTML/CSS</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Frameworks & Tools</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">PyTorch</span>
-                                    <span class="skill-tag">Hugging Face</span>
-                                    <span class="skill-tag">Ultralytics</span>
-                                    <span class="skill-tag">Triton</span>
-                                    <span class="skill-tag">CUDA</span>
-                                    <span class="skill-tag">FastAPI</span>
-                                    <span class="skill-tag">Streamlit</span>
-                                    <span class="skill-tag">Qt6</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Software & Specializations</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">ArcGIS</span>
-                                    <span class="skill-tag">QGIS</span>
-                                    <span class="skill-tag">Computer Vision</span>
-                                    <span class="skill-tag">Large Language Model</span>
-                                    <span class="skill-tag">Deep Learning</span>
-                                    <span class="skill-tag">Remote Sensing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Personal Information Section -->
-            <section class="content-section interests-section" id="interests">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="fas fa-heart"></i>
-                        Personal Information
-                    </h2>
                 </div>
                 
-                <div class="content-grid">
-                    <!-- Leadership & Activities -->
-                    <div class="content-block">
-                        <h3>Leadership & Activities</h3>
-                        <div class="activity-grid">
-                            <div class="activity-item">
-                                <h4>President, Geography E+ Club</h4>
-                                <p>ECNU School of Geographic Sciences</p>
-                            </div>
-                            <div class="activity-item">
-                                <h4>Student Mentor</h4>
-                                <p>1+8 Mentorship Program, ECNU</p>
-                            </div>
-                            <div class="activity-item">
-                                <h4>Volunteer</h4>
-                                <p>ECNU Mengyou Small Animal Protection Society</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Honors & Awards -->
-                    <div class="content-block">
-                        <h3>Honors & Awards</h3>
-                        <div class="awards-grid">
-                            <div class="award-item">
-                                <div>
-                                    <strong>2024 ICM (Interdisciplinary Contest in Modeling)</strong>
-                                    <span>Honorable Mention (Problem D)</span>
-                                </div>
-                            </div>
-                            <div class="award-item">
-                                <div>
-                                    <strong>2023 CUMCM</strong>
-                                    <span>Third Prize, Shanghai Region</span>
-                                </div>
-                            </div>
-                            <div class="award-item">
-                                <div>
-                                    <strong>2023 Geographic Information Technology Competition</strong>
-                                    <span>Individual Third Prize</span>
-                                </div>
-                            </div>
-                            <div class="award-item">
-                                <div>
-                                    <strong>Outstanding Undergraduate Scholarship</strong>
-                                    <span>ECNU, 2022-2024 (Three times)</span>
-                                </div>
-                            </div>
-                            <div class="award-item">
-                                <div>
-                                    <strong>Outstanding Student Leader</strong>
-                                    <span>ECNU, 2022-2023 & 2023-2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Interests -->
-                    <div class="content-block">
-                        <h3>Personal Interests</h3>
-                        <div class="interests-compact">
-                            <div class="interest-tag">
-                                Guitar & Music Writing
-                            </div>
-                            <div class="interest-tag">
-                                Tennis & Soccer
-                            </div>
-                            <div class="interest-tag">
-                                Algorithm Competitions
-                            </div>
-                            <div class="interest-tag">
-                                Digital Illustration
-                            </div>
-                            <div class="interest-tag">
-                                Simulate Racing
-                            </div>
-                            <div class="interest-tag">
-                                Mandarin (Native) / English (IELTS: 7.5)
-                            </div>
-                        </div>
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>Outstanding Undergraduate Scholarship</h3>
+                        <span class="award-level">ECNU, 2022-2024 (Three times)</span>
                     </div>
                 </div>
-            </section>
-        </main>
+
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>Outstanding Student Leader</h3>
+                        <span class="award-level">ECNU, 2022-2023 & 2023-2024</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-block">
+                <h2>Leadership & Activities</h2>
+                
+                <div class="activity-item">
+                    <h3>President, Department Leader, Officer @Geography E+ Club (2021-2024)</h3>
+                    <p>ECNU School of Geographic Sciences</p>
+                </div>
+                
+                <div class="activity-item">
+                    <h3>Student Mentor</h3>
+                    <p>1+8 Mentorship Program, ECNU</p>
+                </div>
+                
+                <div class="activity-item">
+                    <h3>Volunteer</h3>
+                    <p>ECNU Mengyou Small Animal Protection Society</p>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2>Personal Interests</h2>
+                <p>Guitar & Music Writing, Tennis & Soccer, Algorithm Competitions, Digital Illustration, Simulate Racing</p>
+                
+                <h3>Languages</h3>
+                <p>Mandarin (Native), English (IELTS: 7.5)</p>
+            </div>
+        </section>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Zhicheng Xu (CatMan Jr.). | Georgia Tech</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
