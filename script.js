@@ -1,19 +1,17 @@
-// Navigation functionality for both sidebar and top navigation
+// Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation tabs and links, and content sections
-    const navTabs = document.querySelectorAll('.nav-tab');
+    // Get all navigation elements and content sections
     const navLinks = document.querySelectorAll('.nav-link');
-    const allNavElements = [...navTabs, ...navLinks];
     const contentSections = document.querySelectorAll('.content-section');
     
-    // Add click event listeners to all navigation elements
-    allNavElements.forEach(nav => {
+    // Add click event listeners to navigation elements
+    navLinks.forEach(nav => {
         nav.addEventListener('click', function(e) {
             e.preventDefault();
             const targetSection = this.getAttribute('data-section');
             
             // Remove active class from all navigation elements
-            allNavElements.forEach(n => n.classList.remove('active'));
+            navLinks.forEach(n => n.classList.remove('active'));
             
             // Add active class to clicked element
             this.classList.add('active');
@@ -23,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.classList.remove('active');
             });
             
-            // Show target section without animation
+            // Show target section
             const targetElement = document.getElementById(targetSection);
             if (targetElement) {
                 targetElement.classList.add('active');
@@ -45,23 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Remove all hover effects and animations
-    // No more interactive element animations
-    
-    // Responsive navigation for mobile
-    function handleMobileNavigation() {
-        // Since we don't have sidebar and main-content elements in current design,
-        // this function can be simplified or removed
-        // Just handle any responsive behavior if needed
-    }
-    
-    // Handle window resize
-    window.addEventListener('resize', handleMobileNavigation);
-    handleMobileNavigation(); // Initial call
-    
-    // Remove all visual feedback and animations
-    // No more external link animations
-    
     // Handle direct URL navigation
     function handleHashChange() {
         const hash = window.location.hash.substring(1);
@@ -71,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetLink && targetSection) {
                 // Remove active from all
-                allNavElements.forEach(nav => nav.classList.remove('active'));
+                navLinks.forEach(nav => nav.classList.remove('active'));
                 contentSections.forEach(section => section.classList.remove('active'));
                 
                 // Activate target
@@ -87,5 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle initial page load
     handleHashChange();
     
-    console.log('Basic navigation functionality initialized successfully!');
+    console.log('Navigation functionality initialized successfully!');
 });
