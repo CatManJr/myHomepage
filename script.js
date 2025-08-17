@@ -50,22 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Responsive navigation for mobile
     function handleMobileNavigation() {
-        const sidebar = document.querySelector('.sidebar');
-        const mainContent = document.querySelector('.main-content');
-        
-        if (window.innerWidth <= 1024) {
-            // Mobile behavior
-            if (sidebar) {
-                sidebar.style.position = 'relative';
-                sidebar.style.height = 'auto';
-            }
-        } else {
-            // Desktop behavior
-            if (sidebar) {
-                sidebar.style.position = 'sticky';
-                sidebar.style.height = '100vh';
-            }
-        }
+        // Since we don't have sidebar and main-content elements in current design,
+        // this function can be simplified or removed
+        // Just handle any responsive behavior if needed
     }
     
     // Handle window resize
